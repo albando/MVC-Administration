@@ -1,0 +1,23 @@
+[
+    {
+		"ID": 0,
+		"name": "Ozan Kutlucan",
+        "userName": "user",
+        "password": "user",
+        "firmID": 0
+    },
+    {
+		"ID": 0,
+		"name": "Ozan Kutlucan",
+        "userName": "deneme",
+        "password": "user",
+        "firmID": 1
+    },
+    {
+		"ID": 0,
+		"name": "Göktuğ Arslan",
+        "userName": "goktug",
+        "password": "123",
+        "firmID": 1
+    }
+]

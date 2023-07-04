@@ -50,7 +50,21 @@ namespace expressProject.Controllers
             List<Calisanlar> customers = importCalisanlar();
             return View(customers);
         }
-        public ActionResult DeleteCustomer(string id)
+
+
+        //<-------------------------------------------------------------------------------------------------------------------------->
+        //[BAŞI] Calisanlar Sayfası işlemleri
+        public ActionResult AddCustomer(int id)
+        {
+            return View("Calisanlar");
+        }
+
+        public ActionResult EditCustomer(int id)
+        {
+            return View("Calisanlar");
+        }
+
+        public ActionResult DeleteCustomer(int id)
         {
             List<Calisanlar> d = importCalisanlar();
 
@@ -72,6 +86,8 @@ namespace expressProject.Controllers
 
             return RedirectToAction("Calisanlar");
         }
+        //[SONU] Calisanlar Sayfası işlemleri
+        //<-------------------------------------------------------------------------------------------------------------------------->
 
         public ActionResult Mailler()
         {

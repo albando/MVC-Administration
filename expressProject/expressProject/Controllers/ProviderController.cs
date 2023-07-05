@@ -54,17 +54,17 @@ namespace expressProject.Controllers
 
         //<-------------------------------------------------------------------------------------------------------------------------->
         //[BAŞI] Calisanlar Sayfası işlemleri
-        public ActionResult AddCustomer(int id)
+        public ActionResult AddCalisan(int id)
         {
             return View("Calisanlar");
         }
 
-        public ActionResult EditCustomer(int id)
+        public ActionResult EditCalisan(int id)
         {
             return View("Calisanlar");
         }
 
-        public ActionResult DeleteCustomer(int id)
+        public ActionResult DeleteCalisan(int id)
         {
             List<Calisanlar> d = importCalisanlar();
 
@@ -77,16 +77,54 @@ namespace expressProject.Controllers
                 string jsonFilePath = Server.MapPath("~/App_Data/customer.json");
                 System.IO.File.WriteAllText(jsonFilePath, jsonData);
 
-                TempData["SuccessMessage"] = "Çalışan silme işlemi başarıyla tamamlandı.";
+                TempData["SuccessMessageCalisanlar"] = "Çalışan silme işlemi başarıyla tamamlandı.";
             }
             else
             {
-                TempData["ErrorMessage"] = "Silinecek veri bulunamadı.";
+                TempData["ErrorMessageCalisanlar"] = "Silinecek veri bulunamadı.";
             }
 
             return RedirectToAction("Calisanlar");
         }
         //[SONU] Calisanlar Sayfası işlemleri
+        //<-------------------------------------------------------------------------------------------------------------------------->
+
+
+        //<-------------------------------------------------------------------------------------------------------------------------->
+        //[BAŞI] Firmalar Sayfası işlemleri
+        public ActionResult AddFirma(int id)
+        {
+            return View("CustomerTable");
+        }
+
+        public ActionResult EditFirma(int id)
+        {
+            return View("CustomerTable");
+        }
+
+        public ActionResult DeleteFirma(int id)
+        {
+            List<Firms> d = importFirms();
+
+            Firms firmalar = d.FirstOrDefault(c => c.ID == id);
+
+            if (firmalar != null)
+            {
+                d.Remove(firmalar);
+                string jsonData = JsonConvert.SerializeObject(d);
+                string jsonFilePath = Server.MapPath("~/App_Data/firms.json");
+                System.IO.File.WriteAllText(jsonFilePath, jsonData);
+
+                TempData["SuccessMessageFirms"] = "Firma silme işlemi başarıyla tamamlandı.";
+            }
+            else
+            {
+                TempData["ErrorMessageFirms"] = "Silinecek veri bulunamadı.";
+            }
+
+            return RedirectToAction("CustomerTable");
+        }
+        //[SONU] Firmalar Sayfası işlemleri
         //<-------------------------------------------------------------------------------------------------------------------------->
 
         public ActionResult Mailler()

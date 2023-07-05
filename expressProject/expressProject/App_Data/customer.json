@@ -1,6 +1,1 @@
-[
-{"ID":0,"name":"Göktuğ","userName":"goktug","password":"123","email":"goktug123@gmail.com","provider_ID":0},
-{"ID":1,"name":"Ozan","userName":"ozannn","password":"123456","email":"ozan123@gmail.com","provider_ID":0},
-{"ID":1,"name":"Ozan","userName":"ozannn","password":"123456","email":"ozan123@gmail.com","provider_ID":0},
-{"ID":1,"name":"Ozan","userName":"ozannn","password":"123456","email":"ozan123@gmail.com","provider_ID":0}
-]
+[{"ID":0,"name":"Göktuğ","userName":"goktug","password":"123","email":"goktug123@gmail.com","provider_ID":0}]

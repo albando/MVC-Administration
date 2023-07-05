@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
@@ -133,7 +134,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\XMLFile1.xml" />
     <Content Include="assets\css\style.bundle.css" />
     <Content Include="assets\js\custom\account\api-keys\api-keys.js" />
     <Content Include="assets\js\custom\account\billing\general.js" />
@@ -2428,8 +2428,41 @@
     <Content Include="Views\Provider\RoleList.cshtml" />
     <Content Include="Views\Provider\ViewRoles.cshtml" />
     <Content Include="Views\Provider\PermList.cshtml" />
+    <Content Include="Views\Admin\GenelBakis.cshtml" />
+    <Content Include="Views\Admin\Users.cshtml" />
+    <Content Include="Views\Admin\Settings.cshtml" />
+    <Content Include="Views\Admin\RoleList.cshtml" />
+    <Content Include="Views\Admin\ViewRoles.cshtml" />
+    <Content Include="Views\Admin\PermList.cshtml" />
+    <Content Include="Views\Admin\Mailler.cshtml" />
+    <Content Include="Views\Admin\YeniEposta.cshtml" />
+    <Content Include="Views\Admin\GoruntuleYanitla.cshtml" />
+    <Content Include="Views\Admin\Calendar.cshtml" />
+    <Content Include="Views\Admin\EditProfile.cshtml" />
+    <Content Include="Views\Customer\GenelBakis.cshtml" />
+    <Content Include="Views\Customer\EditProfile.cshtml" />
+    <Content Include="Views\Customer\Mailler.cshtml" />
+    <Content Include="Views\Customer\YeniEposta.cshtml" />
+    <Content Include="Views\Customer\GoruntuleYanitla.cshtml" />
+    <Content Include="Views\Customer\Calisanlar.cshtml" />
+    <Content Include="Views\Customer\Settings.cshtml" />
+    <Content Include="Views\Customer\RoleList.cshtml" />
+    <Content Include="Views\Customer\ViewRoles.cshtml" />
+    <Content Include="Views\Customer\PermList.cshtml" />
+    <Content Include="Views\Customer\Calendar.cshtml" />
+    <Content Include="Views\Shared\_EmployeeLayout.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\YeniEposta.cshtml" />
+    <Content Include="Views\Employee\Mailler.cshtml" />
+    <Content Include="Views\Employee\Calendar.cshtml" />
+    <Content Include="Views\Employee\GoruntuleYanitla.cshtml" />
+    <Content Include="Views\Employee\GenelBakis.cshtml" />
+    <Content Include="Views\Employee\EditProfile.cshtml" />
+    <Content Include="Views\Employee\Settings.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />

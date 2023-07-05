@@ -142,7 +142,7 @@ var KTWidgets = function () {
             chart.render();
         });        
     }
- 
+
     var initStatisticsWidget4 = function() {
         var charts = document.querySelectorAll('.statistics-widget-4-chart');
 

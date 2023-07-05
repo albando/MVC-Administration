@@ -16,46 +16,46 @@ namespace expressProject.Controllers
             return View();
         }
 
-        public List<AuthenticationProfile> importProviders()
+        public List<ProviderAuthentication> importProviders()
         {
             string jsonProviderrPath = Server.MapPath("~/App_Data/providers.json");
             string providerText = System.IO.File.ReadAllText(jsonProviderrPath);
 
-            List<AuthenticationProfile> providers = JsonConvert.DeserializeObject<List<AuthenticationProfile>>(providerText);
+            List<ProviderAuthentication> providers = JsonConvert.DeserializeObject<List<ProviderAuthentication>>(providerText);
 
             return providers;
         }
 
-        public List<AuthenticationProfile> importAdmins()
+        public List<ProviderAuthentication> importAdmins()
         {
             string jsonAdminPath = Server.MapPath("~/App_Data/admins.json");
             string adminText = System.IO.File.ReadAllText(jsonAdminPath);
 
-            List<AuthenticationProfile> admins = JsonConvert.DeserializeObject<List<AuthenticationProfile>>(adminText);
+            List<ProviderAuthentication> admins = JsonConvert.DeserializeObject<List<ProviderAuthentication>>(adminText);
 
             return admins;
         }
-        public List<AuthenticationProfile> importCustomer()
+        public List<ProviderAuthentication> importCustomer()
         {
             string jsonCustomerPath = Server.MapPath("~/App_Data/customer.json");
             string customerText = System.IO.File.ReadAllText(jsonCustomerPath);
 
-            List<AuthenticationProfile> customers = JsonConvert.DeserializeObject<List<AuthenticationProfile>>(customerText);
+            List<ProviderAuthentication> customers = JsonConvert.DeserializeObject<List<ProviderAuthentication>>(customerText);
 
             return customers;
         }
 
 
         [HttpPost]
-        public ActionResult Login(AuthenticationProfile model)
+        public ActionResult Login(ProviderAuthentication model)
         {
-            List<AuthenticationProfile> providers = importProviders();
-            List<AuthenticationProfile> admins = importAdmins();
-            List<AuthenticationProfile> customers = importCustomer();
+            List<ProviderAuthentication> providers = importProviders();
+            List<ProviderAuthentication> admins = importAdmins();
+            List<ProviderAuthentication> customers = importCustomer();
 
-            AuthenticationProfile authenticatedProvider = providers.FirstOrDefault(u => u.userName == model.userName && u.password == model.password);
-            AuthenticationProfile authenticatedAdmin = admins.FirstOrDefault(u => u.userName == model.userName && u.password == model.password);
-            AuthenticationProfile authenticatedCustomer = customers.FirstOrDefault(u => u.userName == model.userName && u.password == model.password);
+            ProviderAuthentication authenticatedProvider = providers.FirstOrDefault(u => u.userName == model.userName && u.password == model.password);
+            ProviderAuthentication authenticatedAdmin = admins.FirstOrDefault(u => u.userName == model.userName && u.password == model.password);
+            ProviderAuthentication authenticatedCustomer = customers.FirstOrDefault(u => u.userName == model.userName && u.password == model.password);
 
 
 

@@ -17,7 +17,7 @@ namespace expressProject.Controllers
         public ActionResult Index()
         {
             return View();
-        }   
+        }
 
         public ActionResult CustomerTable()
         {
@@ -149,7 +149,7 @@ namespace expressProject.Controllers
         {
             return View();
         }
-        
+
         public ActionResult Calendar()
         {
             return View();
@@ -175,7 +175,7 @@ namespace expressProject.Controllers
             return View();
         }
 
-        public ActionResult PermList() 
+        public ActionResult PermList()
         {
             return View();
         }
